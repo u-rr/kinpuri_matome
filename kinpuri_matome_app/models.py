@@ -21,7 +21,7 @@ class Article(models.Model):
     people = MultiSelectField(choices=PEOPLES)
     ogp_title = models.CharField(verbose_name="OGPタイトル", max_length=255)
     ogp_description = models.TextField(verbose_name="OGPディスクリプション", blank=True)
-    ogp_site_name = models.URLField(verbose_name="サイト名")
+    ogp_site_name = models.CharField(verbose_name="サイト名", max_length=255)
     ogp_url = models.URLField(verbose_name="記事URL")
     ogp_image = models.URLField(verbose_name="OGP画像")
     last_update = models.DateTimeField()

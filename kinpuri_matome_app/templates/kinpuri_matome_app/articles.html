@@ -1,0 +1,18 @@
+{% extends 'kinpuri_matome_app/base.html' %}
+
+{% block content %}
+<h1>記事一覧</h1>
+
+{% for article in articles %}
+<div>
+    <h2>{{ article.ogp_title }}</a></h2>
+    <p>{{ article.ogp_description|linebreaksbr }}</p>
+    <p>サイト名: {{ article.ogp_site_name }}</p>
+    <p>サイトURL: {{ article.ogp_url }}</p>
+    <p>サイト画像: {{ article.ogp_image }}</p>
+    <p>最終更新日: {{ article.last_update }}</p>
+    <p>メンバー: {{ article.people }}</p>
+</div>
+{% endfor %}
+
+{% endblock %}
